@@ -49,13 +49,13 @@ Bike.prototype.direction = function (direction) {
   let y = this.y();
   let y1 = y;
 
-  if (direction === 'up' && this.direction() !== 'up' && this.direction !== 'down') 
+  if (direction === 'up' && this.direction !== 'up' && this.direction !== 'down') 
     this.positions.push({direction, x, y, y1});
-  else if (direction === 'down' && this.direction() !== 'up' && this.direction !== 'down')
+  else if (direction === 'down' && this.direction !== 'up' && this.direction !== 'down')
     this.positions.push({direction, x, y, y1});
-  else if (direction === 'right' && this.direction() !== 'right' && this.direction !== 'left')
+  else if (direction === 'right' && this.direction !== 'right' && this.direction !== 'left')
     this.positions.push({direction, x, y, x1});
-  else if (direction === 'left' && this.direction() !== 'right' && this.direction !== 'left')
+  else if (direction === 'left' && this.direction !== 'right' && this.direction !== 'left')
     this.positions.push({direction, x, y, x1})
     
   return this.positions[this.positions.length - 1].direction;
